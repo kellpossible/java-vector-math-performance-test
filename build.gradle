@@ -1,0 +1,42 @@
+group 'com.vectorlibraryperformancetest'
+version '1.0-SNAPSHOT'
+
+apply plugin: 'java'
+
+sourceCompatibility = JavaVersion.VERSION_1_6
+
+
+buildscript {
+    repositories {
+        jcenter()
+    }
+    dependencies {
+        classpath "me.champeau.gradle:jmh-gradle-plugin:0.2.0"
+    }
+}
+
+apply plugin: "me.champeau.gradle.jmh"
+
+
+repositories {
+    mavenCentral()
+    jcenter()
+    maven { url "https://oss.sonatype.org/content/repositories/snapshots/" }
+}
+
+dependencies {
+    testCompile group: 'junit', name: 'junit', version: '4.11'
+
+    compile "org.lwjgl:lwjgl:3.0.0a"
+    compile "org.lwjgl:lwjgl-platform:3.0.0a:natives-windows"
+    compile "org.lwjgl:lwjgl-platform:3.0.0a:natives-linux"
+    compile "org.lwjgl:lwjgl-platform:3.0.0a:natives-osx"
+    compile 'org.openjdk.jmh:jmh-core:1.12'
+    compile 'org.openjdk.jmh:jmh-generator-annprocess:1.12'
+
+    compile "org.apache.commons:commons-math3:3.6.1"
+    compile "com.samskivert:pythagoras:1.4.1"
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+}
+
+
