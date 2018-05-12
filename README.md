@@ -1,8 +1,15 @@
-# Vector Library Performance Test
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](./LICENSE.txt)
+<p align = "center">
+    <a href="https://github.com/kellpossible/java-vector-math-performance-test/blob/master/LICENSE.txt">
+         <img src="https://img.shields.io/badge/License-MIT-yellow.svg" alt="LICENSE">
+    </a>
+    <strong>| <a href="https://kellpossible.github.io/libgdx-atc-sim/VectorLibraryPerformanceTest/VectorLibraryPerformanceTest.html">Project Documentation</a></strong>
+</p>
 
+
+# Vector Library Performance Test
 The purpose of this performance test was to review several methods/libraries
-available for vector/matrix math operations.
+available for vector/matrix math operations for use in
+[libgdx-atc-sim](https://github.com/kellpossible/libgdx-atc-sim)
 
 + [Apache commons-math](https://commons.apache.org/proper/commons-math/apidocs/org/apache/commons/math3/geometry/euclidean/threed/Vector3D.html)
 + [Pythagoras Library](https://github.com/samskivert/pythagoras)
